@@ -1,0 +1,54 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+}
+
+android {
+    namespace 'computerlauncher.window10.store'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "computerlauncher.window10.store"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    implementation 'androidx.room:room-runtime:2.5.1'  // Use the latest version
+    annotationProcessor 'androidx.room:room-compiler:2.5.1'
+
+    // Optional - Room for coroutines and RxJava support (use one or both based on your requirements)
+    implementation 'androidx.room:room-rxjava2:2.5.1'  // For RxJava support
+    implementation 'androidx.room:room-ktx:2.5.1'      // For Kotlin coroutines support
+
+    // Optional - Testing Room
+    testImplementation 'androidx.room:room-testing:2.5.1'
+}

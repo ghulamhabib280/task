@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".pkg2.AddActivity">
+
+    <!-- Author Fields -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Author" />
+    <EditText
+        android:id="@+id/authorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Author Name" />
+    <EditText
+        android:id="@+id/authorNationality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nationality" />
+    <EditText
+        android:id="@+id/authorBirthYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Birth Year" />
+
+
+    <EditText
+        android:id="@+id/genreName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Genre Name" />
+    <EditText
+        android:id="@+id/genreDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description" />
+
+
+    <EditText
+        android:id="@+id/bookTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Book Title" />
+
+    <EditText
+        android:id="@+id/bookYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Publication Year" />
+
+    <Button
+        android:id="@+id/btnAddBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Book" />
+    <Button
+        android:id="@+id/btnShowAllBooks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="show"
+        android:text="Show All Books" />
+
+</LinearLayout>
